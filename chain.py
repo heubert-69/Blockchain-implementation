@@ -27,7 +27,7 @@ class Blockchain:
 	def AddBlock(self, new_data):
 		latest_block = self.GetLatestBlock()
 		new_block = Block(len(self.chain), new_data, latest_block.hash)
-		self.chain.append(latest_block)
+		self.chain.append(new_block)
 
 	def IsChainValid(self):
 		for i in range(1, len(self.chain)):
